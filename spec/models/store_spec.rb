@@ -8,6 +8,7 @@ RSpec.describe Store, type: :model do
   it {should validate_presence_of(:number)}
   it {should validate_numericality_of(:number).only_integer}
   it {should validate_inclusion_of(:number).in_range(10000..99999)}
+  it {should validate_uniqueness_of(:number)}
 
   it "a new record should have a default open value of true" do
   	new_store = Store.new

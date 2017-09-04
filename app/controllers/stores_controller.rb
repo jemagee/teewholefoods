@@ -6,9 +6,13 @@ class StoresController < ApplicationController
 
 	def create
 		@store = Store.new(store_params)
-		@store.save
-		flash[:success] = "The store was added"
-		redirect_to @store
+		if @store.save
+			flash[:success] = "The store was added"
+			redirect_to @store
+		else
+			flash.now[:warning] = "The store was not added"
+			render 'new'
+		end
 	end
 
 	def show

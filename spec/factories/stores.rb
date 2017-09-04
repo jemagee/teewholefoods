@@ -1,8 +1,6 @@
 FactoryGirl.define do
   factory :store do
-    region nil
-    open false
-    name "MyString"
-    number 1
+    sequence(:name) {|n| "Store Name#{n}"}
+    sequence(:number) {|n| 10000+n}
   end
 end

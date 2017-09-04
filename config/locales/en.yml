@@ -24,11 +24,16 @@ en:
     attributes:
       region:
         name: "Region name"
+      store:
+        name: "Store name"
+        number: "Store number"
     errors:
       models: 
         region:
           attributes:
             name:
               too_short: "must be at least 3 letters"
-              
-
+        store:
+          attributes:
+            number:
+              inclusion: "Store number must be 5 digits"

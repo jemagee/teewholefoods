@@ -1,3 +1,7 @@
+<% if store.errors.any? %>
+	<%= render "shared/errors", object: store %>
+<% end %>
+
 <%= form_for(store) do |f| %>
 
 	<%= f.label :name %>

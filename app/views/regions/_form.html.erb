@@ -1,10 +1,5 @@
 <% if region.errors.any? %>
-	<div class="row errors">
-		<h4><%= pluralize(region.errors.count, 'error')%> prevented this region from being entered</h4>
-		<% region.errors.full_messages.each do |msg| %>
-			<%= msg %>
-		<% end %>
-	</div>
+	<%= render "shared/errors", object: region %>
 <% end %>
 
 <%= form_for(region) do |f| %>
