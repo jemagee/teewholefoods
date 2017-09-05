@@ -8,3 +8,6 @@
 <div id="store_status">
 	Status: <%= @store.status %>
 </div>
+<div id="links">
+	<%= link_to fa_icon('edit', text: "Edit Store"), edit_store_path(@store), class: "btn btn-sm btn-primary" %>
+</div>
