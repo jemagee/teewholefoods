@@ -10,4 +10,5 @@
 </div>
 <div id="links">
 	<%= link_to fa_icon('edit', text: "Edit Store"), edit_store_path(@store), class: "btn btn-sm btn-primary" %>
+	<%= link_to fa_icon('close', text: "Close Store"), store_path(@store), method: :delete, data: {confirm: "Are you sure you want to close this store?"} %>
 </div>

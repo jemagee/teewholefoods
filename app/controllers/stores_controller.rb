@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
 
-	before_action :get_store, only: [:show, :edit, :update]
+	before_action :get_store, only: [:show, :edit, :update, :destroy]
 
 	def new
 		@store = Store.new
@@ -31,6 +31,12 @@ class StoresController < ApplicationController
 			flash.now[:warning] = "The store was not updated"
 			render 'edit'
 		end
+	end
+
+	def destroy
+		@store.update(open: false)
+		flash[:success] = "The store was marked as closed"
+		redirect_to @store.region
 	end
 
 	private
