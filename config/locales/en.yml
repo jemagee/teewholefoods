@@ -27,6 +27,9 @@ en:
       store:
         name: "Store name"
         number: "Store number"
+      item: 
+        name: "Item name"
+        number: "Item UPC"
     errors:
       models: 
         region:
@@ -37,3 +40,10 @@ en:
           attributes:
             number:
               inclusion: "Store number must be 5 digits"
+        item:
+          attributes:
+            name:
+              too_short: "must be at least 5 letters"
+            number:
+              not_a_number: "must be a number"
+              inclusion: "is not valid"

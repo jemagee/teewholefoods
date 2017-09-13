@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :regions
   resources :stores
+  resources :items
 end
